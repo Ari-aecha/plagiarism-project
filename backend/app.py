@@ -31,7 +31,11 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', '72759cd8f4b592a9a61af51b4f43
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', '72759cd8f4b592a9a61af51b4f43f48937629779745bdede')
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = False
 
-CORS(app, origins=["http://localhost:3000", "http://127.0.0.1:3000"], supports_credentials=True)
+CORS(app, origins=[
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://plagiarism-project-pfyl.vercel.app"
+], supports_credentials=True)
 bcrypt = Bcrypt(app)
 jwt = JWTManager(app)
 
