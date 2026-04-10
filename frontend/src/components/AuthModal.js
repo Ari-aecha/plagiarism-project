@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 
-const API = 'http://127.0.0.1:5000';
+const API = 'https://plagiarism-project-hv2v.onrender.com';
 
 const AuthModal = ({ isOpen, onClose, mode, onSuccess }) => {
   const [activeMode, setActiveMode] = useState(mode || 'login');

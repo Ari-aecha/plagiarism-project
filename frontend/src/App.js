@@ -11,7 +11,7 @@ import './App.css';
 
 ChartJS.register(BarElement, ArcElement, LineElement, PointElement, CategoryScale, LinearScale, Tooltip, Legend, Filler);
 
-const API = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+const API = process.env.REACT_APP_API_URL || 'https://plagiarism-project-hv2v.onrender.com';
 
 function AppContent() {
   const [file1, setFile1] = useState(null);
