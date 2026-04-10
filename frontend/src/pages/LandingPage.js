@@ -185,9 +185,9 @@ const LandingPage = ({ onGetStarted = () => {} }) => {
               <p>Diploma Final Year Project — Computer Engineering</p>
               <p>Comprehensive plagiarism & AI detection system</p>
             </div>
-            <div className="footer-links"><h4>Product</h4><a href="#" onClick={e=>e.preventDefault()}>Document Similarity Checker</a><a href="#" onClick={e=>e.preventDefault()}>AI Guardian</a></div>
-            <div className="footer-links"><h4>Support</h4><a href="#" onClick={e=>{e.preventDefault();setShowContactModal(true)}}>Contact Us</a></div>
-            <div className="footer-links"><h4>Legal</h4><a href="#" onClick={e=>{e.preventDefault();setShowPrivacyModal(true)}}>Privacy Policy</a><a href="#" onClick={e=>{e.preventDefault();setShowTermsModal(true)}}>Terms of Service</a></div>
+            <div className="footer-links"><h4>Product</h4><a href="javascript:void(0)" onClick={e=>e.preventDefault()}>Document Similarity Checker</a><a href="javascript:void(0)" onClick={e=>e.preventDefault()}>AI Guardian</a></div>
+            <div className="footer-links"><h4>Support</h4><a href="javascript:void(0)" onClick={e=>{e.preventDefault();setShowContactModal(true)}}>Contact Us</a></div>
+            <div className="footer-links"><h4>Legal</h4><a href="javascript:void(0)" onClick={e=>{e.preventDefault();setShowPrivacyModal(true)}}>Privacy Policy</a><a href="javascript:void(0)" onClick={e=>{e.preventDefault();setShowTermsModal(true)}}>Terms of Service</a></div>
           </div>
           <div className="footer-bottom">
             <p>© 2026 PlagiGuard | Computer Engineering Diploma Project</p>

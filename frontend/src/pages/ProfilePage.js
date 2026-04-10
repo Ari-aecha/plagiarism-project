@@ -14,7 +14,10 @@ const ProfilePage = ({ user, onUpdateProfile }) => {
   });
   const [formData, setFormData] = useState({ ...profile });
 
-  useEffect(() => { loadProfile(); }, []);
+  useEffect(() => { 
+    loadProfile(); 
+    // eslint-disable-next-line react-hooks/exhaustive-deps 
+  }, []);
 
   const loadProfile = async () => {
     try {
