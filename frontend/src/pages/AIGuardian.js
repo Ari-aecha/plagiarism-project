@@ -28,6 +28,9 @@ const Icons = {
   Clock: () => (<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>),
 };
 
+// API constant
+const API = process.env.REACT_APP_API_URL;
+
 const AIGuardian = ({ user }) => {
   const [uploadedFile, setUploadedFile] = useState(null);
   const [documentName, setDocumentName] = useState('');
@@ -64,6 +67,13 @@ const AIGuardian = ({ user }) => {
 
   const analyzeDocument = async () => {
     if (!uploadedFile) { alert('Please select a document to analyze'); return; }
+    
+    // Safety check
+    if (!API) {
+      alert("API URL not configured");
+      return;
+    }
+    
     setLoading(true); setLoadingProgress(0); setError(null);
     setLoadingStage('Initializing analysis...');
     const formData = new FormData();
@@ -74,7 +84,7 @@ const AIGuardian = ({ user }) => {
         setLoadingProgress(prev => prev >= 90 ? prev : prev + 10);
       }, 600);
       setLoadingStage('Analyzing document...');
-      const response = await fetch('http://127.0.0.1:5000/api/ai-guardian/analyze', {
+      const response = await fetch(`${API}/api/ai-guardian/analyze`, {
         method: 'POST',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData

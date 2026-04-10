@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API = 'https://plagiarism-project-hv2v.onrender.com';
-
+const API = process.env.REACT_APP_API_URL;
 const ProfilePage = ({ user, onUpdateProfile }) => {
   const [showSettings, setShowSettings] = useState(false);
   const [loading, setLoading] = useState(false);
